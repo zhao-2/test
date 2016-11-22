@@ -1,0 +1,64 @@
+<ion-view view-title="分类">
+    <ion-content>
+       <div class="class_top">
+            <p style="background: #eee; margin: 20px 0 20px 40px; font-family: '微软雅黑'; font-size: 14px;">[最 热]</p>
+            <ion-slide-box does-continue="true" auto-play="true" slide-interval="1500">
+                <ion-slide>
+                    <div class="box"><img src="images/lunbobaiye_350.jpg"><a href="#/detail?title=白夜行" style="color:#000;text-decoration: none; position: absolute;
+                    bottom: 0; left: 60%; font-size: 12px; font-weight: bold;">《白夜行》</a></div>
+                </ion-slide>
+                <ion-slide>
+                    <div class="box"><img src="images/lunbobaiduren.jpg"><a href="#/detail?title=摆渡人 [Ferryman]" style="color:#2b669a; text-decoration: none;
+                    text-decoration: none; position: absolute; bottom: 0; left: 60%; font-size: 12px; font-weight: bold;">
+                        《摆渡人》</a></div>
+                </ion-slide>
+                <ion-slide>
+                    <div class="box"><img src="images/lunbobuwang.jpg"><a href="#/detail?title=不忘初心，方得始终" style="color: #3c7500; text-decoration: none;
+                    text-decoration: none; position: absolute; bottom: 0; left: 60%; font-size: 12px; font-weight: bold;">
+                        《不忘初心》</a></div>
+                </ion-slide>
+                <ion-slide>
+                    <div class="box"><img src="images/lunbopinang_350.jpg"><a href="#/detail?title=皮囊" style="color:#9d9d9d; text-decoration: none;
+                    text-decoration: none; font-size: 12px;position: absolute; bottom: 0; left: 60%; font-weight: bold;">
+                        《皮囊》</a></div>
+                </ion-slide>
+            </ion-slide-box>
+        </div>
+
+        <div class="class_cen">
+            <p style="background: #eee; margin: 20px 0px 20px 40px; font-family: '微软雅黑'; font-size: 14px;">[文 学]</p>
+            <ion-list>
+                <ion-item class="item item-thumbnail-left" ng-repeat="product in infor.products"
+                          style=" margin: 10px 2% 10px 2%; border-radius: 5px;"
+                          item-text-wrap>
+                    <img ng-src="{{product.imgsrc}}">
+                    <h2 style="color: #000;font-size: 16px; margin: 5px 0px 5px 2px">{{product.title}}</h2>
+                    <span style="font-size:14px; color: #999; margin-bottom: 5px;">{{product.author}}</span>
+                    <p>{{product.desc}}</p>
+                    <!--<a href="#/tabs/detail">详情</a>-->
+                    <a href="#/detail?title={{product.title}}" style="color: #d58512; font-size: 12px; text-decoration: none;">[详情]<br/></a>
+                </ion-item>
+            </ion-list>
+        </div>
+
+        <div class="class_bot">
+            <p style="background: #eee; margin: 20px 0px 20px 40px; font-family: '微软雅黑'; font-size: 14px;">[小 说]</p>
+            <ion-list>
+                <ion-item class="item item-thumbnail-left" ng-repeat="product in data.productList"
+                          style=" margin: 10px 2% 10px 2%; border-radius: 5px;"
+                          item-text-wrap>
+                    <img ng-src="{{product.imgsrc}}">
+                    <h2 style="color: #000;font-size: 16px; margin: 5px 0px 5px 2px">{{product.title}}</h2>
+                    <span style="font-size:14px; color: #999; margin-bottom: 5px;">{{product.author}}</span>
+                    <p>{{product.desc}}</p>
+                    <!--<a href="#/tabs/detail">详情</a>-->
+                    <a href="#/detail?title={{product.title}}" style="color:#d58512; font-size: 12px; text-decoration: none;">[详情]<br/></a>
+                </ion-item>
+            </ion-list>
+        </div>
+
+    </ion-content>
+    <ion-footer-bar class="bar-dark ">
+        <button class="button icon-left ion-ios-arrow-back button-clear" ui-sref="home">返回到主页</button>
+    </ion-footer-bar>
+</ion-view>

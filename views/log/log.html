@@ -1,0 +1,104 @@
+<div class="bar bar-header bar-energized item-input-inset" style="background:#d58512; color: #fff;">
+    <button class="button button-clear icon-right ion-android-arrow-dropdown">城市</button>
+    <div class="item-input-wrapper">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="search" placeholder="请输入搜索关键字"/>
+    </div>
+    <button class="button button-icon ion-android-search"></button>
+</div>
+
+<!-- content -->
+<div class="scroll-content has-header has-footer overflow-scroll">
+    <div class="list list-inset">
+        <!--<div class="item item-input">-->
+        <div class="item item-input item-stacked-label">
+            <span class="input-label">账号:</span>
+            <input type="text" name="username" placeholder="手机/邮箱/账号"/>
+        </div>
+
+        <!--<div class="item item-input">-->
+        <div class="item item-input item-floating-label">
+            <span class="input-label">密码:</span>
+            <input type="password" name="username" placeholder="请输入密码"/>
+        </div>
+
+        <div class="item item-input-inset"><!--inset:说明内有嵌入的input-->
+            <div class="item-input-wrapper">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="search" placeholder="请输入搜索关键字"/>
+            </div>
+            <button class="button button-icon ion-android-search"></button>
+        </div>
+
+        <div class="item item-input">
+            <textarea placeholder="请输入个人简介" rows="5"></textarea>
+        </div>
+
+        <div class="item item-input item-select">
+            <span class="input-label">所在城市:</span>
+            <select>
+                <option value="北京市">北京</option>
+                <option value="深圳市">深圳</option>
+                <option value="成都市">成都</option>
+            </select>
+        </div>
+
+        <!--单选按钮-->
+        <div class="item item-divider item-dark">性别</div>
+        <label class="item item-radio">
+            <input type="radio" name="gender" value="男" checked="checked"/>
+            <div class="radio-content">
+                <div class="item-content">帅哥</div>
+                <i class="radio-icon ion-checkmark assertive"></i>
+            </div>
+        </label>
+        <label class="item item-radio">
+            <input type="radio" name="gender" value="女"/>
+            <div class="radio-content">
+                <div class="item-content">美女</div>
+                <i class="radio-icon ion-checkmark assertive"></i>
+            </div>
+        </label>
+
+        <!--复选框-->
+        <div class="item item-divider item-dark">爱好</div>
+        <div class="item item-checkbox">
+            <label class="checkbox">
+                <input type="checkbox" value="旅游">
+            </label>旅游
+        </div>
+        <div class="item item-checkbox">
+            <label class="checkbox checkbox-assertive">
+                <input type="checkbox" value="美食">
+            </label>美食
+        </div>
+        <div class="item item-checkbox">
+            <label class="checkbox checkbox-energized">
+                <input type="checkbox" value="电影">
+            </label>电影
+        </div>
+
+        <!--复选框充当开关按钮-->
+        <div class="item item-toggle">
+            是否同意本协议
+            <label class="toggle toggle-assertive">
+                <input type="checkbox"/>
+                <div class="track"><div class="handle"></div></div>
+            </label>
+        </div>
+
+        <!--范围选择组件-->
+        <div class="item range range-positive">
+            <i class="icon ion-android-sunny assertive"></i>
+            <input type="range" name="volumn" min="0" max="100" value="50"/>
+            <i class="icon ion-fork positive"></i>
+        </div>
+
+        <button class="button button-full" ui-sref="home" style="background:#d58512; color: #fff;">登录</button>
+    </div>
+</div>
+
+<!-- footer -->
+<div class="bar bar-footer bar-energized" style="background:#2b542c; color: #fff;">
+    <h1 class="title">感谢您使用书城</h1>
+</div>

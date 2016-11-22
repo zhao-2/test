@@ -1,0 +1,37 @@
+<ion-view>
+    <ion-header-bar class="detail_barNav" style=" background: #d58512;">
+        <a id="detail_a" href="#/read/recommend" class="ion-chevron-left" style="font-size: 2em; margin:5px 10px; color: #fff;"></a>
+        <h1 class="title" style="color: #fff; letter-spacing: 5px;">书籍详情</h1>
+    </ion-header-bar>
+
+    <ion-content>
+        <div class="top" style="margin-top: 20px;">
+            <p style="float: left;"><img style=" width: 150px; height: 150px;" ng-src="{{product.imgsrc}}"></p>
+            <div class="right" style="float: left; margin-top: 10px; margin-left: 4px;">
+                <p>书名：{{product.title}}</p>
+                <p>作者：{{product.author}}</p>
+                <span style=" display:inline-block; font-size: 12px; color: #666; margin: 2px 10px 0 0">评价:</span>
+                <a href="javascript:;" style="text-decoration: none;" ng-repeat="star in starArr">
+                    <i class="icon {{star.icon}}" ng-click="setRating(star.value)"></i>
+                </a>
+                <p>价格：{{product.price | currency:"RMB ￥"}}</p>
+            </div>
+            <button class="detail_button" ng-click="add(product)" style="position: absolute; top: 127px; right: 20px; border: 1px solid #d58512;
+             color:#d58512;  border-radius: 5px; background: #fff;">
+                加入购物车
+            </button>
+        </div>
+
+        <div class="cen">
+            <h4 style="background: #eee; clear: both; font-weight: bold; margin: 0px 2% 10px 2%; font-size: 14px; padding: 10px 10px">
+                导言</h4>
+            <p style="margin: 20px 2% 20px 2%; text-indent: 2em; line-height: 25px; letter-spacing: 1px;">
+                {{product.desc}}</p>
+
+            <h4 style="background: #eee; clear: both; font-weight: bold; margin: 0px 2% 10px 2%; font-size: 14px; padding: 10px 10px">
+                作者简介</h4>
+            <p style="margin: 20px 2% 20px 2%; text-indent: 2em; line-height: 25px; letter-spacing: 1px;">
+                {{product.intro}}</p>
+        </div>
+    </ion-content>
+</ion-view>

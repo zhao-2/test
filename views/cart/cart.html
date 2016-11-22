@@ -1,0 +1,29 @@
+<ion-view view-title="我的购物车">
+    <ion-header-bar>
+        <a ui-sref="home" class="ion-chevron-left" style=" text-decoration: none;
+        color: #d58512; line-height: 44px; font-family: '微软雅黑'; font-size: 14px; line-height: 40px;"></a>
+        <h1 class="title" style="font-family:'微软雅黑'; letter-spacing: 2px;">购物车</h1>
+    </ion-header-bar>
+    <ion-content style="background: #eee;">
+        <div class="row row-center light-bg" style="background: #fff; margin-bottom: 20px;">
+            <div class="col col-10">#</div>
+            <div class="col">商品名称</div>
+            <div class="col col-20">数量</div>
+            <div class="col col-20">小计</div>
+        </div>
+        <div class="row row-center" ng-repeat="item in cartData" style="background: #fff; margin-bottom: 20px;">
+            <div class="col col-10">{{$index+1}}</div>
+            <div class="col">{{item.product.title}}</div>
+            <div class="col col-20">{{item.count}}</div>
+            <div class="col col-20">{{item.product.price * item.count | currency:"￥"}}</div>
+        </div>
+        <div class="row row-center" style="background: #fff;">
+            <div class="col col-10">#</div>
+            <div class="col">合计:</div>
+            <div class="col col-20">{{itemCount()}}件</div>
+            <div class="col col-20">{{total() | currency:"￥"}}</div>
+        </div>
+        <a class="cart_right" ui-sref="thank" style="text-decoration: none; background: #d58512; color: #fff; border: 1px solid #d58512;
+        padding:5px 10px 5px 10px; border-radius: 5px; margin-left: 43%; display: inline-block; margin-top: 20px;">提交订单</a>
+    </ion-content>
+</ion-view>

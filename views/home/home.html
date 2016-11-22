@@ -1,0 +1,32 @@
+<style>
+    .home_barNav {
+        background: #999;
+        border: 1px solid #000;
+    }
+</style>
+
+<ion-view view-title="热门">
+    <ion-header-bar class="home_barNav">
+        <a menu-toggle="left" class="button button-icon icon ion-navicon"></a>
+        <h1 class="title" style="color: #fff; letter-spacing: 5px;">热门</h1>
+    </ion-header-bar>
+    <ion-content class="home_content" style="background: url('images/zijihuade1.jpg') no-repeat;
+    background-size: cover;">
+        <ion-list>
+            <ion-item class="item item-thumbnail-left" ng-repeat="product in data.productList"
+                      style="background-color: rgba(0,0,0,0.1); margin: 10px 2% 10px 2%; border-radius: 5px;"
+                      item-text-wrap>
+                <img ng-src="{{product.imgsrc}}">
+                <h2 style="color: #000;font-size: 16px; margin: 5px 0px 5px 2px">{{product.title}}</h2>
+                <span style="font-size:14px; color: #999; margin-bottom: 5px;">{{product.author}}</span>
+                <p>{{product.desc}}</p>
+                <!--<a href="#/tabs/detail">详情</a>-->
+                <a href="#/detail?title={{product.title}}" style="font-size: 12px; color: #d58512; text-decoration: none;">[详情]<br/></a>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
+
+
+
+

@@ -1,0 +1,17 @@
+<ion-view view-title="推荐">
+    <ion-content>
+        <ion-list>
+            <ion-item class="item item-thumbnail-left" ng-repeat="product in data.products"
+                      style="background-color: rgba(0,0,0,0.1); margin: 10px 2% 10px 2%; border-radius: 5px;"
+                      item-text-wrap>
+                <img ng-src="{{product.imgsrc}}" >
+                <h2 style="color: #000;font-size: 16px; margin: 5px 0px 5px 2px">{{product.title}}</h2>
+                <span style="font-size:14px; color: #999; margin-bottom: 5px;">{{product.author}}</span><br/>
+                <a href="#/detail?title={{product.title}}" style="color:#2b542c; font-size: 12px; text-decoration: none;">[详情]<br/></a>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+    <ion-footer-bar class="bar-dark ">
+        <button class="button icon-left ion-ios-arrow-back button-clear" ui-sref="home">返回到主页</button>
+    </ion-footer-bar>
+</ion-view>
